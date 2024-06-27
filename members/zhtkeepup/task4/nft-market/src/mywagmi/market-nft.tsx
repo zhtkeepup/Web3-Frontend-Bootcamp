@@ -2,13 +2,13 @@ import { type BaseError, useReadContracts, useAccount } from "wagmi";
 
 import { tokenContract, nftContract, marketContract } from "./contracts";
 
-export function MyTokenNft() {
+export function Market() {
   const nftId = 1n;
   const { address } = useAccount();
   const { data, error, isPending } = useReadContracts({
     contracts: [
       {
-        ...tokenContract,
+        ...marketContract,
         functionName: "balanceOf",
         args: [address],
       },

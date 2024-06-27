@@ -29,15 +29,17 @@ function ConnectWallet() {
 function App() {
   // 3. Wrap app with Wagmi and React Query context.
   return (
-    <WagmiProvider config={config}>
-      ^_^
-      <QueryClientProvider client={queryClient}>
-        <ConnectWallet />
-        +++++1+
-        <SendTransaction />
-        +++++2+
-      </QueryClientProvider>
-    </WagmiProvider>
+    <div style={{ marginLeft: "100px" }}>
+      <WagmiProvider config={config}>
+        ^_^
+        <QueryClientProvider client={queryClient}>
+          <ConnectWallet />
+          +++++1+
+          <SendTransaction />
+          +++++2+
+        </QueryClientProvider>
+      </WagmiProvider>
+    </div>
   );
 }
 
